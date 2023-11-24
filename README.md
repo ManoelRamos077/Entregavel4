@@ -20,20 +20,34 @@ Para obter uma cópia do projeto em sua máquina local, você precisará clonar 
 ```bash
 git clone https://exemplo.com/seuprojeto.git
 
-
 Em seguida, navegue até o diretório do projeto clonado:
 
 cd seuprojeto
 
-Dentro do diretório do projeto, instale as dependências necessárias executando:
+Configurando o Projeto Node.js
+Agora que você está dentro do diretório do projeto, inicialize seu projeto Node.js. Isso criará um arquivo package.json no seu projeto, que é usado para gerenciar as dependências do projeto:
+
+npm init
+
+Siga as instruções na tela para criar o package.json. Você pode simplesmente pressionar Enter para aceitar as configurações padrão se desejar.
+
+Configurando Jest para Testes
+Após a criação do arquivo package.json, abra-o e modifique a seção scripts para configurar o Jest como seu framework de teste:
+
+"scripts": {
+    "test": "jest"
+}
+
+Isso permite que você execute seus testes utilizando o comando npm test, que por sua vez chamará o Jest.
+
+Salve as alterações no arquivo package.json.
+
+Instalando Jest
+Por fim, instale o Jest como uma dependência de desenvolvimento no seu projeto:
 
 npm install --save-dev jest
 
-Este comando irá baixar e instalar o Jest e quaisquer outras dependências listadas no seu arquivo package.json.
-
-Uma vez que seu ambiente de desenvolvimento está configurado, você pode inicializar seu projeto Node.js. Navegue até o diretório do projeto no terminal e execute o seguinte comando:
-
-npm init
+Isso irá baixar e instalar o Jest, permitindo que você execute os testes unitários escritos para o seu projeto.
 
 ## Executando Testes
 
